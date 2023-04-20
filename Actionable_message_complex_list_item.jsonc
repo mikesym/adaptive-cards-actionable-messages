@@ -1,0 +1,59 @@
+{
+  "type": "ColumnSet",
+  "columns": [
+    {
+      "type": "Column",
+      "items": [
+        {
+          "type": "TextBlock",
+          "horizontalAlignment": "Left",
+          "text": "", /* Serial number or id of the element */
+          "wrap": true,
+          "size": "Medium"
+        }
+      ],
+      "width": "auto",
+      "padding": "None",
+      "spacing": "None"
+    },
+    {
+      "type": "Column",
+      "items": [
+        {
+          "type": "FactSet",
+          "id": "9d60e7c6-611b-c2b9-b43e-af37c0154ad6",
+          "facts": [
+            {
+              "title": "Property name:",
+              "value": "" /* value of property, usually as @{items('<< name of apply to each step >>')?['<< name of property >>']} */
+            }
+            /* you can add an arbitrary number of other property name-value pairs */
+          ]
+        }
+      ],
+      "width": "stretch",
+      "spacing": "Small",
+      "padding": "None"
+    },
+    {
+      "type": "Column",
+      "items": [
+        {
+          "type": "FactSet",
+          "id": "274d7b95-17ae-ff6d-fa93-27568cf0fb2c",
+          "facts": [
+            {
+              "title": "Property name:",
+              "value": "" /* value of property, usually as @{items('<< name of apply to each step >>')?['<< name of property >>']} */
+            }
+            /* you can add an arbitrary number of other property name-value pairs */
+          ]
+        }
+      ],
+      "width": "stretch",
+      "spacing": "Small",
+      "padding": "None"
+    }
+  ],
+  "padding": "None"
+}
