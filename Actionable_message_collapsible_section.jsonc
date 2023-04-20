@@ -1,0 +1,127 @@
+{
+  "type": "Container",
+  "spacing": "None",
+  "items": [
+    {
+      /* this container is the header, containing the chevron control to expand/collapse the second container:
+      - ChevronUp is an image
+        - default visibility is false
+        - action toggles visiibility of all 3 elements
+      - ChevronDown is an image
+        - default visibility is true
+        - action toggles visiibility of all 3 elements
+      - ...Wrapper is a Container
+        - default visibility is false
+      */
+      "type": "Container",
+      "id": "b149e1cc-0414-662b-6435-ad68d851bf67",
+      "padding": "Default",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "spacing": "None",
+          "style": "emphasis",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "Documents",
+                  "wrap": true,
+                  "spacing": "None"
+                }
+              ],
+              "width": "stretch",
+              "spacing": "None",
+              "padding": "None"
+            },
+            {
+              "type": "Column",
+              "id": "ActivityHistoryChevronDown",
+              "items": [
+                {
+                  "type": "Image",
+                  "selectAction": {
+                    "type": "Action.ToggleVisibility",
+                    "id": "ExpandActivityHistory",
+                    "title": "Expand Activity History",
+                    "targetElements": [
+                      "ActivityHistoryWrapper",
+                      "ActivityHistoryChevronUp",
+                      "ActivityHistoryChevronDown"
+                    ]
+                  },
+                  "url": "https://amdesigner.azurewebsites.net/samples/assets/Down.png",
+                  "width": "20px",
+                  "altText": "Expand",
+                  "height": "20px"
+                }
+              ],
+              "width": "auto",
+              "spacing": "None",
+              "padding": "None"
+            },
+            {
+              "type": "Column",
+              "id": "ActivityHistoryChevronUp",
+              "isVisible": false,
+              "items": [
+                {
+                  "type": "Image",
+                  "selectAction": {
+                    "type": "Action.ToggleVisibility",
+                    "id": "CollapseActivityHistory",
+                    "title": "Collapse Activity History",
+                    "targetElements": [
+                      "ActivityHistoryWrapper",
+                      "ActivityHistoryChevronUp",
+                      "ActivityHistoryChevronDown"
+                    ]
+                  },
+                  "url": "https://amdesigner.azurewebsites.net/samples/assets/Up.png",
+                  "width": "20px",
+                  "altText": "Collapse",
+                  "height": "20px"
+                }
+              ],
+              "width": "auto",
+              "padding": "None"
+            }
+          ],
+          "padding": "None"
+        }
+      ],
+      "spacing": "None",
+      "style": "emphasis",
+      "separator": true,
+      "selectAction": {
+        "type": "Action.ToggleVisibility",
+        "targetElements": [
+          "ActivityHistoryWrapper",
+          "ActivityHistoryChevronUp",
+          "ActivityHistoryChevronDown"
+        ],
+        "id": "ExpandActivityHistory",
+        "title": "Expand Activity History"
+      }
+    },
+    {
+      "type": "Container",
+      "id": "ActivityHistoryWrapper",
+      "isVisible": false,
+      "items": [], /* an array of objects goes here. If using result of a Power Automate step, no need to wrap it in [] */
+      "padding": {
+        "top": "Default",
+        "bottom": "Large",
+        "left": "Default",
+        "right": "Default"
+      },
+      "spacing": "None",
+      "separator": true
+    }
+  ],
+  "padding": "None",
+  "separator": true
+}
